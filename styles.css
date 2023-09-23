@@ -1,0 +1,151 @@
+body{
+    background-color: #1C1C1C;
+}
+
+
+.board{
+    width: 600px;
+    height: 800px;
+    background-color: bisque;
+    transform: translate(600px, 70px);
+    border-radius: 10px;
+    border: 16px solid green;
+    box-shadow: 0 0 1000px rgba(251, 255, 0, 0.5);
+}
+
+.red-coin{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid #1C1C1C;
+    background-color: red;
+    bottom: 10px;
+    right: 400px;
+    animation: redmove1 2s linear 1, redmove2 2s linear 2s forwards;
+}
+
+.black-coin{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: black;
+    bottom: 10px;
+    right: 100px;
+    animation: blackmove 2s linear 4s forwards, fadeOut 1s linear 6s forwards;
+}
+
+.mesh{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    opacity: 0.7;
+    border-radius: 50px;
+    bottom: 820px;
+    right: 1200px;
+}
+
+.line1{
+    width: 3px;
+    height: 80px;
+    background-color: white;
+    position: absolute;
+    transform: translate(578px, -788px);
+}
+.line2{
+    width: 3px;
+    height: 80px;
+    background-color: white;
+    position: absolute;
+    transform: translate(632px, -788px);
+}
+.line3{
+    width: 80px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transform: translate(566px, -779px);
+}
+.line4{
+    width: 80px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transform: translate(566px, -719px);
+}
+.line5{
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transform: translate(557px, -749px);
+}
+.line6{
+    width: 3px;
+    height: 90px;
+    background-color: white;
+    position: absolute;
+    transform: translate(605px, -792px);
+}
+
+.lamp{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; 
+    border-right: 50px solid transparent; 
+    border-bottom: 100px solid #5e5e5e; 
+    transform: translate(1700px, -400px) rotate(90deg);
+}
+
+.lampstand{
+    position: absolute;
+    width: 20px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: #5e5e5e;
+    transform: translate(1800px, -740px)
+}
+
+.light{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 400px solid transparent;
+    border-right: 400px solid transparent;
+    border-bottom: 500px solid rgba(251, 255, 0, 0.5);
+    transform: translate(1050px, -700px) rotate(90deg);
+    opacity: 0.2;
+}
+
+
+@keyframes redmove1{
+    from{bottom: 10px;
+         right: 400px}
+    to{bottom: 755px;
+       right: 300px}
+}
+
+@keyframes redmove2{
+    from{bottom: 755px;
+         right: 300px}
+    to{bottom: 10px;
+       right: 100px}
+}
+
+@keyframes blackmove{
+    from{bottom: 10px;
+         right: 100px}
+    to{bottom: 760px;
+        right: 550px}
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
