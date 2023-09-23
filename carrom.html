@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container{
+            height: 100vh;
+            width: 100vw;
+            border: solid black 2px;
+            position: relative;
+            background-color: rgb(187, 103, 23);;
+        }
+        .board{
+            height: 500px;
+            width: 500px;
+            border: 3px solid black;
+            position: relative;
+            left: 400px;
+            top: 200px;
+            background-color: bisque;
+            background-image: url("https://pin.it/5sNUZjn");
+        }
+        .innerbox{
+            height: 420px;
+            width: 420px;
+            border: 2px solid black;
+            position: relative;
+             left: 40px;
+            top: 40px; 
+        }
+        .inn2{
+            height: 370px;
+            width: 370px;
+            border: 2px dotted black;
+            position: relative;
+             left: 25px;
+            top: 25px; 
+        }
+        .hole1{
+            height: 42px;
+            width: 42px;
+            border: 1px solid black;
+            border-radius: 25px;
+            position: relative;
+            background-color: red;
+            box-shadow:  inset 0 0 10px rgba(0, 0, 0, 0.7);
+            top: 32px;
+        }
+        .hole2{
+            height: 42px;
+            width: 42px;
+            border: 1px solid black;
+            border-radius: 25px;
+            position: relative;
+            background-color: red;
+            box-shadow:  inset 0 0 10px rgba(0, 0, 0, 0.7);
+            top: -460px;
+            z-index: 1;
+        }
+        .hole3{
+            height: 42px;
+            width: 42px;
+            border: 1px solid black;
+            border-radius: 25px;
+            position: relative;
+            background-color: red;
+            box-shadow:  inset 0 0 10px rgba(0, 0, 0, 0.7);
+            top: -48px;
+            left: 453px; 
+        }
+        .hole4{
+            height: 42px;
+            width: 42px;
+            border: 1px solid black;
+            border-radius: 25px;
+            position: relative;
+            background-color: red;
+            box-shadow:  inset 0 0 10px rgba(0, 0, 0, 0.7);
+            top: -547px;
+            left: 453px; 
+        }
+        .striker{
+            height: 20px;
+            width: 20px;
+            border: 1px solid black;
+            border-radius: 25px;
+            position: relative;
+            background-color: rgb(246, 248, 248);
+            box-shadow:  inset 0 0 10px rgba(0, 0, 0, 0.7);
+            /* top: -547px;
+            left: 453px;  */
+            top: 370px;
+            left: 50px;
+            animation-name: strikermoment;
+            animation-duration:4s;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-play-state: running;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            /* animation-direction: alternate; */
+        }
+
+        @keyframes strikermoment {
+            0%{
+                top: 370px;
+                left: 50px;
+            }
+            20%{
+                top: 200px;
+                left: 66px;
+            }
+            40%{
+                top: -80px;
+                left: 100px;
+            }
+            60%{
+                top: 100px;
+                left: 150px ;
+            }
+            80%{
+                top: 355px;
+                left: 260px;
+            }
+            100%{
+                top:365px ;
+                left: 170px;
+            }
+
+        }
+        .coin{
+            height: 20px;
+            width: 20px;
+            border: 1px solid black;
+            border-radius: 25px;
+            position: relative;
+            background-color: blue;
+            box-shadow:  inset 0 0 10px rgba(0, 0, 0, 0.7);
+            top: 350px;
+            left: 250px;
+            animation-name: coinmoment;
+            animation-delay: 3.4s;
+            animation-duration:2s;
+            animation-iteration-count: 1;
+            animation-play-state: running;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            z-index: 1;
+        }
+        @keyframes coinmoment {
+            0%{
+                top: 350px;
+                left: 250px;
+            }
+            20%{
+                top: 390px;
+                left:250px ;
+            }
+            40%{
+                top: 120px;
+                left: 120px;
+            }
+            60%{
+                top: 20px;
+                left: 50px;
+            }
+            80%{
+                top: -40px;
+                left: -40px;
+                /* opacity: 1; */
+            }
+            100%{
+                top: -90px;
+                left: -50px;
+                opacity: 0.4;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Carrom Board</h1>
+       <div class="board">
+        <div class="innerbox">
+            <div class="inn2">
+                <div class="striker"></div>
+                <div class="coin"></div>
+
+            </div>
+        </div>
+        <div class="hole1"></div>
+        <div class="hole2"></div>
+        <div class="hole3"></div>
+        <div class="hole4"></div>
+        <!-- <div class="striker"> -->
+
+        </div>
+        
+       </div>
+    </div>
+    
+</body>
+</html>
