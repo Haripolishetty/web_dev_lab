@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.pole{
+    height: 500px;
+    width: 10px;
+    background-color: silver;
+    right: 75%;
+    bottom: 10%;
+    position: absolute;
+    border-radius: 10rem;
+
+}
+
+.hook{
+    height: 5px;
+    width: 20px;
+    background-color: silver;
+    position: absolute;
+    right: 73% ;
+    top: 45%;
+
+}
+
+.mesh{
+    height: 2rem;
+    width: 5rem;
+    border-radius: 100%;
+    background-color: transparent;
+    position: absolute;
+    left: 26.75%;
+    top: 44%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+
+
+}
+
+.meshb{
+    height: 4.2rem;
+    aspect-ratio: 1;
+    border-radius: 60% 0% 0% 60%;
+    background-color: transparent;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 27.5%;
+    bottom: 46.5%;
+    border: 2cm;
+    border-style: solid;
+    border-width: 2px 0px 2px 0px;
+    border-color: red;
+    
+
+}
+
+.meshc{
+    height: 3.25rem;
+    aspect-ratio: 1;
+    border-radius: 60% 0% 0% 60%;
+    background-color: transparent;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 28.25%;
+    bottom: 47.5%;
+    border: 2cm;
+    border-style: solid;
+    border-width: 2px 0px 2px 0px;
+    border-color: red;
+    
+
+}
+
+.meshd{
+    height: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 60% 0% 0% 60%;
+    background-color: transparent;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 29%;
+    bottom: 48.75%;
+    border: 2cm;
+    border-style: solid;
+    border-width: 2px 0px 2px 0px;
+    border-color: red;
+    
+
+}
+
+.meshe{
+    height: 1.75rem;
+    aspect-ratio: 1;
+    border-radius: 60% 0% 0% 60%;
+    background-color: transparent;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 29.75%;
+    bottom: 50%;
+    border: 2cm;
+    border-style: solid;
+    border-width: 2px 0px 2px 0px;
+    border-color: red;
+    
+
+}
+
+
+
+
+
+
+.ball{
+    height: 3rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 26%;
+    top: 35%;
+    
+    animation: bounce 4s linear  1s infinite forwards normal;
+
+
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateX(0) translateY(0) rotate(60deg);
+    }
+    15%{
+        transform: translateX(0) translateY(59px) rotate(120deg);
+
+    }
+
+    30%{
+        transform: translateX(50px) translateY(0) rotate(180deg);
+
+    }
+
+    45%{
+        transform: translateX(50px) translateY(59px) rotate(240deg);
+    }
+
+    60%{
+        transform: translateX(25px) translateY(25px) rotate(360deg); 
+    }
+
+    75%{
+        transform: translateX(27px) translateY(100px) rotate(420deg);
+    }
+
+    90%{
+        transform: translateX(29px) translateY(175px) rotate(480deg);
+
+    }
+
+    100%{
+        transform: translateX(25px) translateY(250px) rotate(540deg);
+    }
+    
+}
