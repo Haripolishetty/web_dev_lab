@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: antiquewhite;
+        }
+        
+        .grass{
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            bottom: 0px;
+            background-color: rgb(3, 72, 24);
+        }
+        img{
+           position: absolute; 
+           width: 50px;
+           height: 100px;
+           bottom: 50px;
+           left:10px;
+           transform: rotate(30deg);
+           z-index : -1;
+           animation: club 1s linear 1 forwards;
+        }
+        .ball{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            border-radius: 100%;
+            background-image: url("https://th.bing.com/th?id=OIP.xZcu3elbU6IIXNKvPqo-IQHaHM&w=253&h=246&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2");
+            bottom: 50px;
+            left :50px;
+            z-index : 1;
+            animation: aball 5s ease-in 1;
+
+        }
+        .hole{
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            border-radius: 100%;
+            background-color: rgb(0, 0, 0);
+            bottom: 0px;
+            left :85%;
+            z-index : 2;
+        }
+        @keyframes club {
+            100%{
+                transform: rotate(-30deg);
+            }
+            
+        }
+        @keyframes aball {
+            25% {
+                bottom: 250px;
+                left :35%;
+            }
+            50%{
+                bottom: 400px;
+                left :60%;
+            }
+            100%{
+                bottom: 0px;
+                left :85%;
+            }
+
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="grass">
+        <img src="https://th.bing.com/th/id/OIP.IEKt5TEr7NCSQMUVeKUy9AHaHa?w=200&h=200&c=7&r=0&o=5&dpr=2&pid=1.7">
+           <div class="ball"></div> 
+           <div class="hole"></div>
+        </div>
+    </div>
+</body>
+</html>
