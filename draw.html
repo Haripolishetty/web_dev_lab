@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Two Points</title>
+    <style>
+        canvas {
+            border: 1px solid #cac30e;
+            cursor: crosshair;
+        }
+    </style>
+</head>
+<body>
+    <h2>Click on the canvas to connect two points</h2>
+    <canvas id="myCanvas" width="600" height="400"></canvas>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            var points = [];
+
+            canvas.addEventListener("click", function(event) {
+                var mouseX = event.clientX - canvas.getBoundingClientRect().left;
+                var mouseY = event.clientY - canvas.getBoundingClientRect().top;
+
+                points.push({ x: mouseX, y: mouseY });
+
+                if (points.length === 2) {
+                    drawLine();
+                }
+            });
+
+            function drawLine() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                ctx.beginPath();
+                ctx.moveTo(points[0].x, points[0].y);
+                ctx.lineTo(points[1].x, points[1].y);
+                ctx.stroke();
+
+                // Reset points array for the next line
+                points = [];
+            }
+        });
+    </script>
+</body>
+</html>
